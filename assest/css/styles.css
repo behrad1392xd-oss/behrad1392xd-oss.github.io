@@ -1,0 +1,736 @@
+/*=====================
+    Header style
+=======================*/
+
+.main-header {
+    box-shadow: 0 5px 20px #00000052;
+    z-index: 100;
+    background: #282c33;
+    position: fixed;
+    width: 100%;
+    padding: 30px 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo-wrapper {
+        display: flex;
+        gap: 6px;
+    }
+
+    .Header-logo {
+        width: 16px;
+        height: 24px;
+    }
+
+    /*=====================
+        nav styles
+    =======================*/
+
+    .nav-list {
+        display: flex;
+        gap: 5px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+
+    .nav-link {
+        padding: 0 0.5rem;
+        color: #abb2bf;
+        transition: all 0.3s;
+
+        &::before {
+            content: "#";
+            color: rgb(170, 15, 201);
+        }
+
+        /*** Hover effect ***/
+        &:hover {
+            color: white;
+        }
+    }
+
+    /*** active link ***/
+    .nav-link.active {
+        color: white;
+    }
+}
+
+
+/*=====================
+ Header logo Contact
+=====================*/
+
+.Header-link-Container {
+    z-index: 1000;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    left: 30px;
+
+    .header-line-left {
+        width: 2px;
+        height: 150px;
+        background: #8c929c;
+    }
+
+    .Header-left-logo {
+        transform: translateX(-46.5%);
+        font-size: 1.3rem;
+        margin-top: 5px;
+        color: #b8bec9;
+    }
+}
+
+/****** responsive header *********/
+
+@media screen and (max-width: 768px) {
+    .main-header {
+        padding: 20px 5%;
+        position: sticky; 
+        top: 0;
+    }
+
+    nav {
+        position: fixed;
+        width: 100%;
+        margin-top: -100px ;
+        
+    }
+
+    .nav-list {
+        flex-direction: column;
+        margin: 0 -20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        width: 100%;
+        position: absolute;
+        background: #282c33;
+        padding: 20px
+    }
+
+    .nav-link {
+        font-size: 16px;
+
+    }
+
+
+
+    .Header-link-Container {
+         display: none; 
+    }
+
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 768px){
+    nav {
+        padding-top: 80px;
+    }
+
+    .Header-logo,
+    .header-behard-profile {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 400px){
+    .nav-list {
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+
+    .main-header .nav-link{
+        font-size: 1.2rem;
+    }
+}
+
+
+/*=====================
+    behrad info
+=======================*/
+
+.Behrad-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+    gap: 2rem;
+    height: 101dvh;
+
+    /*** left section ***/
+
+    .info-left-section {
+        background-color:#282c33;
+    }
+
+    .info-title {
+        font-size: 2.4rem;
+    }
+
+    .info-text-import {
+        color: #c778dd;
+    }
+
+    .info-text {
+        margin: 1.8rem 0;
+        color: #abb2bf;
+        font-size: 1.2rem;
+    }
+
+    .info-link {
+        border: 1px solid #c778dd;
+        padding: 8px 12px;
+        background-color: #282c33;
+        font-size: 1rem;
+        color: white;
+        transition: all 0.3s;
+
+        &:hover {
+            background: rgba(199, 120, 221, 0.2);
+        }
+    }
+
+    /*** right section ***/
+
+    .info-right-section {
+        position: relative;
+    }
+
+    .info-img {
+        width: 360px;
+
+    }
+
+    .info-under-img {
+        position: relative;
+        z-index: 1;
+        border: 1px solid #abb2bf;
+        padding: 5px 30px;
+        text-align: center;
+        bottom: 20px;
+        background-color: #282c33;
+        color: #abb2bf;
+    }
+
+    .info-shape {
+        z-index: -1;
+        position: absolute;
+        width: 130px;
+        right: -23px;
+        top: 157px;
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .info-right-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Behrad-info .info-under-img {
+        padding: 5px 21%;
+    }
+
+
+    .Behrad-info {
+        scroll-margin-top: 90px;
+        margin-top: 70px; 
+
+    }
+
+    .Behrad-info .info-img {
+        width: 60%;
+        margin-top: 40px;
+    }
+
+    .Behrad-info .info-shape {
+        transform: translate(-50% -50%);
+        top: 50%;
+        right: 20%;
+        width: 80px;
+    }
+
+    .project-card {
+        width: 80%;
+    }
+
+    .info-right-section {
+        width: 100%;
+    }
+}
+/*=====================
+        sogul
+=======================*/
+
+.slogun-section {
+    text-align: center;
+
+    .slogun-box {
+        border: 1px solid #abb2bf;
+        display: inline-block;
+        padding: 1.2rem 2rem;
+        position: relative;
+        margin: 40px;
+    }
+
+    .quote-left {
+        position: absolute;
+        top: -20px;
+        left: 10px;
+        width: 35px;
+    }
+
+    .slogun-text {
+        color: white;
+    }
+
+    .quote-right {
+        position: absolute;
+        bottom: -20px;
+        right: 10px;
+        width: 35px;
+    }
+
+}
+
+/*=====================
+    Projest styles
+=======================*/
+
+
+.project-container {
+    width: 70%;
+    margin: 7rem auto;
+    scroll-margin-top: 90px; 
+    height: 71dvh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    /*=====================
+    Projest title
+    =======================*/
+
+    .project-title-box {
+        display: flex;
+        justify-content: space-between;        
+    }
+
+    .project-title {
+        position: relative;
+        margin-bottom: 2rem;
+
+        &::before {
+            content: "#";
+            margin-right: 2px;
+            color: rgb(170, 15, 201);
+        }
+
+        &::after {
+            position: absolute;
+            content: " ";
+            width: 400px;
+            height: 1px;
+            background: #c778c0;
+            left: 108%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+
+    }
+    .project-View {
+        color: white;
+        transition: all 0.3s;
+
+        &:hover {
+            color: #c77bdd;
+        }
+    }
+
+    /*=====================
+    Project content
+    =======================*/
+    .project-list {
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .project-card {
+        width: 32%;
+        border: 1px solid #a0a5b0;
+    }
+
+    .project-img {
+        width: 100%;
+        object-fit: cover;
+        height: 176px;
+    }
+
+    .Coffee-img {
+        object-position: top center;
+    }
+
+    .project-tecnologies {
+        color: #a0a5b0;
+        border-top: 1px solid #a0a5b0 ;
+        border-bottom: 1px solid #a0a5b0 ;
+        padding: 5px ;
+    }
+
+    .project-info-box {
+        padding: 10px;
+    }
+
+    .project-name {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .project-text {
+        color: #a0a5b0;
+
+    }
+
+    .project-link {
+        margin-top: 12px;
+        display: inline-block;
+        border: 1px solid #c778dd;
+        padding: 4.5px 12px;
+        background-color: #282c33;
+        font-size: 1rem;
+        color: white;
+        transition: all 0.3s;
+
+        &:hover {
+            background: rgba(199, 120, 221, 0.2);
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .project-container {
+        margin: 2rem auto; 
+    }
+
+    .project-list {
+        width: 100%;
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .project-container .project-card {
+        width: 70% ; 
+    }
+
+    .project-container .project-info-box {
+        text-align: left;
+    }
+    
+    .project-title::after {
+        width: 150px; 
+        left: 110%;
+    }
+
+    .project-container .project-list {
+        gap: 20px;
+    }
+}
+
+
+/*==================
+    Skills style
+==================*/
+
+.Behrad-Skills {
+    margin: 0 auto;
+    width: 70%;
+    margin-bottom: 10rem;
+    scroll-margin-top: 100px;
+    height: 40dvh;
+
+    /* title */
+
+    .Skills-title {
+        position: relative;
+        margin-bottom: 2rem;
+
+        &::before {
+            content: "#";
+            margin-right: 2px;
+            color: rgb(170, 15, 201);
+        }
+
+        &::after {
+            position: absolute;
+            content: " ";
+            width: 400px;
+            height: 1px;
+            background: #c778c0;
+            left: 9%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    /* textes */
+
+    .Skills-coulmn {
+        width: 32%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .Skills-box {
+        display: flex;
+        justify-content: left;
+        gap: 10px;
+        flex-wrap: wrap;
+        align-items: start;
+        align-content: flex-start;
+    }
+
+    .Skills-box-item {
+        border: 1px solid #a0a5b0;
+        padding-block: 5px;
+        border-radius: 3px;
+    }
+
+    .Skills-box-item-title {
+        padding: 0px 0px 5px 6px;
+    }
+
+    .Skills-box-item-text {
+        color: #a0a5b0;
+        padding: 2px 6px; 
+    }
+
+    .Skills-box-item-text:nth-child(2) {
+        border-top: 1px solid #a0a5b0;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .Behrad-Skills {
+        width: 90%;
+        margin-bottom: 3rem;
+    }
+
+    .Behrad-Skills .Skills-coulmn {
+        width: 30%;
+    }
+
+    
+}
+
+/*=================
+    Aboute Styles
+==================*/
+
+.Aboute-behrad {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #a0a5b0;
+    margin-bottom: 100px;
+    scroll-margin-top: 100px;
+    height: 70dvh;
+
+    /*** left ***/
+    .Aboute-left-item {
+        width: 50%;
+    }
+
+    .Aboute-me-title {
+        position: relative;
+        margin-bottom: 2rem;
+        color: white;
+
+        &::before {
+            content: "#";
+            margin-right: 2px;
+            color: rgb(170, 15, 201);
+        }
+
+        &::after {
+            position: absolute;
+            content: " ";
+            width: 300px;
+            height: 1px;
+            background: #c778c0;
+            left: 29%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .Aboute-up-text {
+        margin: 0.4rem 0 2.3rem 0;
+    }
+
+    .Aboute-paragragh {
+        margin-bottom: 2rem;
+    }
+
+    .Aboute-btn {
+        margin-top: 12px;
+        display: inline-block;
+        border: 1px solid #c778dd;
+        padding: 4.5px 12px;
+        background-color: #282c33;
+        font-size: 1rem;
+        color: white;
+        transition: all 0.3s;
+
+        &:hover {
+            background: rgba(199, 120, 221, 0.2);   
+        }
+    }
+
+    /*** right ***/
+    .Aboute-right-item {
+        position: relative;
+    }
+
+    .Aboute-shape-img {
+        position: absolute;
+        top: 22px;
+        left: -15px;
+        z-index: -20;
+    }
+
+    .Aboute-behrad-img {
+        width: 360px;
+        border-bottom: 1px solid #c778dd;
+    }   
+}
+
+@media screen and (max-width: 750px) {
+    .Aboute-behrad .Aboute-behrad-img{
+        width: 140px;
+    }
+
+    .Aboute-behrad .Aboute-left-item {
+        width: 46%;
+    }
+
+    .Aboute-behrad .Aboute-shape-img {
+        width: 33px;
+        top: 6px;
+        left: -3px;
+    }
+
+    .Behrad-info {
+        flex-direction: column;
+    }
+}
+
+/*================
+    contact 
+==================*/
+
+.Contact-behrad {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 200px;
+
+    /*** left ***/
+    .Contact-left-item {
+        width: 45%;
+    }
+
+    .Contact-title {
+        position: relative;
+        margin-bottom: 2rem;
+
+        &::before {
+            content: "#";
+            margin-right: 2px;
+            color: rgb(170, 15, 201);
+        }
+
+        &::after {
+            position: absolute;
+            content: " ";
+            width: 300px;
+            height: 1px;
+            background: #c778c0;
+            left: 26%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .Contact-text {
+        color: #a0a5b0;
+    }
+
+
+    /*** right ***/
+    .Contact-right-item {
+        margin-top: 50px;
+        border: 1px solid #a0a5b0;
+        padding: 8px;
+    }
+
+    .Contact-right-text {
+        display: block;
+        user-select: none;
+        cursor: pointer;
+    }
+
+
+    .Contact-logo {
+        margin: 0 4px;
+    }
+
+    .Contact-title-right {
+        margin-bottom: 10px;
+        display: block;
+    }
+}
+
+.Footer-text {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    .Behrad-info, 
+    .project-container, 
+    .Aboute-behrad, 
+    .Contact-behrad {
+        width: 90%;
+        
+        height: auto; 
+        margin-bottom: 50px;
+    }
+
+    .project-title::after, 
+    .Skills-title::after, 
+    .Aboute-me-title::after, 
+    .Contact-title::after {
+        display: none; 
+    }
+
+        html {
+        font-size: 10px;
+    }
+}
